@@ -1,5 +1,5 @@
-# setup an Ansible control server and any number of servers used to run commands again
-# Run the run_playbook.sh
+1. setup an Ansible control server and any number of servers used to run commands again
+2. Run the run_playbook.sh
 
 <pre>
 sudo apt-get update
