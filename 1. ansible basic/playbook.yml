@@ -1,0 +1,11 @@
+---
+
+- hosts: apacheweb
+  user: ansible
+  sudo: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: Install apache
+      action: yum name=http state=installed
+  
