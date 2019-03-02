@@ -4,6 +4,7 @@ How to use:
 * set the ansible user to be able to sudo
 * share an ssh key from the ansible control server to the targets
 
+<pre>
 sudo apt-get update
 sudo apt-get upgrade -y
 sudo apt-get install python -y
@@ -23,7 +24,7 @@ WEB2 192.168.1.101
 WEB3 192.168.1.102
 
 ansible -m ping all
-
+</pre>
 
 
 
