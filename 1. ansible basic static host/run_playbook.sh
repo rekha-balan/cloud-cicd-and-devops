@@ -1,1 +1,1 @@
-ansible-playbook -i hosts -u cabox playbook.yml
+ansible-playbook -i hosts playbook.yml

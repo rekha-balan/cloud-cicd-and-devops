@@ -1,6 +1,5 @@
-How to use: 
-
-setup an Ansible control server and any number of servers used to run commands again
+# setup an Ansible control server and any number of servers used to run commands again
+# Run the run_playbook.sh
 
 <pre>
 sudo apt-get update
@@ -24,18 +23,6 @@ sudo adduser <username> sudo
 sudo apt-get install python -y
 
 ssh-copy-id IP_ADDRESS_OF_NODE
-
-sudo vi /etc/ansible/hosts
-[group_name]
-ALIAS IP_ADDRESS_OF_NODE
-
-
-[webservers]
-WEB1 192.168.1.100
-WEB2 192.168.1.101
-WEB3 192.168.1.102
-
-ansible -m ping all 
 </pre>
 
 # Concepts

@@ -1,0 +1,9 @@
+[all:vars]
+ansible_user=cabox
+
+[server]
+35.189.6.29
+
+[server:vars]
+log_folders=/opt/log
+# the above are variable specific to the "server" group 
