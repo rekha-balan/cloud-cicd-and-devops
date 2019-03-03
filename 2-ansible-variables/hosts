@@ -2,7 +2,10 @@
 ansible_user=cabox
 
 [server]
-35.189.6.29
+35.185.72.92
+
+[server2]
+35.185.72.92
 
 [server:vars]
 log_folders=/opt/log

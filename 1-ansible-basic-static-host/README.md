@@ -1,3 +1,10 @@
+Demonstrate 
+1. Playbook 
+2. Static host
+
+--- 
+
+
 1. setup an Ansible control server and any number of servers used to run commands again
 2. Run the run_playbook.sh
 
@@ -12,15 +19,17 @@ login to node servers
 if required, change  /etc/ssh/sshd_config PasswordAuthentication yes
 and sudo systemctl restart sshd
 Revert changes to ssh_config later  
-sudo visudo 
-add at the bottom $USER ALL=(ALL) NOPASSWD: ALL
-Where $USER is your username in your system.
+
 
 create user e.g. cabox which is the SSH user for Code Anywhere
 sudo useradd -m -d /home/cabox cabox
 sudo passwd cabox
 sudo adduser <username> sudo
 sudo apt-get install python -y
+
+sudo visudo 
+add at the bottom $USER ALL=(ALL) NOPASSWD: ALL
+Where $USER is your username in your system.
 
 ssh-copy-id IP_ADDRESS_OF_NODE
 </pre>
