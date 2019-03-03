@@ -1,0 +1,5 @@
+[server]
+35.185.72.92
+
+[server:vars]
+ansible_hostname=instace-1

@@ -1,0 +1,19 @@
+---
+
+- hosts: server
+  user: cabox
+  become: yes
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: Install apache
+      action: apt name=apache2 state=latest
+    - name: create file if does not exist
+      file:
+        state: touch
+        path: /var/www/html/index.html
+    - name: if line not there then add it 
+      lineinfile:
+        state: present 
+        dest: /var/www/html/index.html
+        line: Hostname={{ansible_hostname}}

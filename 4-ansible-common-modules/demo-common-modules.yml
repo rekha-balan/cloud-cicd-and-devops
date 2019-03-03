@@ -1,0 +1,26 @@
+---
+- hosts: all
+  user: cabox 
+  become: yes
+  gather_facts: no 
+  tasks:
+    - name: command ls -l /home/cabox
+      command: ls -l /home/cabox  
+    - name: shell ls -l /home/cabox > /tmp/cabox.txt
+      shell: ls -l /home/cabox > /tmp/cabox.txt
+    - name: add line 
+      lineinfile:
+        dest: /tmp/cabox.txt
+        insertafter: EOF
+        line: End of file line 
+    - name: create file if not exists
+      file:
+        state: touch
+        path: /tmp/cabox2.txt 
+    - name: add line
+      lineinfile:
+        state: present
+        dest: /tmp/cabox2.txt
+        insertafter: EOF
+        line: End of file line       
+      
