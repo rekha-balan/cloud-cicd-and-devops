@@ -1,0 +1,8 @@
+---
+- hosts: all
+  user: cabox 
+  become: yes
+  gather_facts: no 
+  tasks:
+    - name: uninstall apache2
+      action: apt name=apache2 state=absent

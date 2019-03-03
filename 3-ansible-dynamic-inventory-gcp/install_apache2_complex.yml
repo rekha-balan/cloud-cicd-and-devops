@@ -1,0 +1,19 @@
+---
+- hosts: all
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: cabox
+  become: yes
+  tasks:
+  - name: latest apache2
+    apt: name=apache2 state=latest 
+  - name: write apache config file
+    template: src=/etc/httpd.conf dest=/etc/httpd.conf 
+    notify:
+    - restart apache 
+  - name: enable apache at boot
+    service: name=httpd state=started enabled=yes
+  handlers:
+  - name: restart apache
+    service: name=http state=restarted
