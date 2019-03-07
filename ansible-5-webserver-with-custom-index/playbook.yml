@@ -1,8 +1,8 @@
 ---
 
 - hosts: server
-  user: cabox
-  become: yes
+  user: ubuntu
+  sudo: yes
   connection: ssh
   gather_facts: no
   tasks:

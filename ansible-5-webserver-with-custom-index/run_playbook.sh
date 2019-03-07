@@ -1,1 +1,1 @@
-ansible-playbook -i hosts playbook.yml
+ansible-playbook -vvvv -i hosts playbook.yml
