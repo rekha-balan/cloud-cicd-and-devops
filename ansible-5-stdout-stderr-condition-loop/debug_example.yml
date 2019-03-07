@@ -1,5 +1,10 @@
 ---
 - hosts: server
+  user: ubuntu
+  vars:
+    create_file: true
+  sudo: yes
+  connection: ssh
   tasks:
   - name: print stdout
     command: echo "hello there"
@@ -13,3 +18,11 @@
   - debug: msg="stdout={{motd}}"
   - debug: msg="motd stderr is empty"
     when: motd.stderr == ""
+  - name: if OS is debian install apache2
+    action: apt name=apache2 state=latest
+    when: ansible_os_family == "Debian"
+  - name: create file if the create_file param is true 
+    file:
+      state: touch
+      path: /home/ubuntu/variable_was_true.txt
+    when: not create_file

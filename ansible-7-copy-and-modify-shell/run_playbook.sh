@@ -1,1 +1,1 @@
-ansible-playbook -i hosts mainapp.yml
+ansible-playbook -i hosts program.yml

@@ -1,0 +1,22 @@
+---
+
+- hosts: server
+  user: ubuntu
+  sudo: yes
+  tasks:
+  - name: upload a file to the target server if doesnt exist
+    copy:
+      src: program.sh
+      dest: /home/ubuntu/program.sh
+      mode: 0755
+  - name: insert hostname 
+    lineinfile: 
+      state: present
+      dest: /home/ubuntu/program.sh 
+      regexp: '^HOSTNAME='
+      line: HOSTNAME={{ansible_hostname}}
+  - name: run the program 
+    shell: /home/ubuntu/program.sh
+    register: output 
+  - debug: msg="stdout={{output}}"
+  
