@@ -1,0 +1,13 @@
+---
+- hosts: server
+  sudo: yes 
+  pre_tasks: 
+    - shell: echo 'pretask'
+  roles:
+    - { role: apache-webserver, when: "ansible_os_family == 'Debian'" }
+  tasks: 
+    - shell: echo 'task'
+  post_tasks: 
+    - shell: echo 'posttask'
+
+    

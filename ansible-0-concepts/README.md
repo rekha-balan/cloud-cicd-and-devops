@@ -38,7 +38,7 @@ Play is task. Playbook contains plays.
 Configuration file by default /etc/ansible/ansible.cfg ; read everytime playbook is run  
 If you have more than one config files: ANSIBLE_CONFIG environment variable, ansible.cfg in current directory, .ansible.cfg in home directory, /etc/ansible/ansible.cfg 
 
-Templates - definition and set of params for running an ainsible job if you want to execute same job many times. You can use variables to populate content in template 
+Templates - definition and set of params for running an ansible job if you want to execute same job many times. You can use variables to populate content in template. Based on Jinja template mechanism. 
 
 Handler - to handle error conditions, called at the end of each play 
 

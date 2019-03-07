@@ -1,0 +1,22 @@
+---
+
+- hosts: server
+  user: ubuntu
+  sudo: yes
+  vars:
+    servername: "{{ansible_hostname}}"
+  connection: ssh
+  gather_facts: no
+  tasks:
+    - name: Install apache
+      action: apt name=apache2 state=latest
+    - name: create file if does not exist
+      template: src=template.j2 dest=/var/www/html/index.html
+      notify:
+      - restart apache2
+  handlers:
+    - name: restart apache2
+      service:
+        name: apache2
+        state: reloaded
+        enabled: yes

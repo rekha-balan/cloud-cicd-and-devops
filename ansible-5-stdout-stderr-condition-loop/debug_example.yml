@@ -26,3 +26,15 @@
       state: touch
       path: /home/ubuntu/variable_was_true.txt
     when: not create_file
+  - name: loop example 
+    file:
+      state: touch
+      path: /home/ubuntu/{{item}}
+    with_items:
+      - file_1
+      - file_2
+      - file_3
+  - debug:
+      msg: "{{item}}"
+    with_file:
+      - sample_file.txt

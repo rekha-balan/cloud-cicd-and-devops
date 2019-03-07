@@ -1,0 +1,5 @@
+---
+
+- shell: cat /etc/motd
+  register: output 
+- debug: msg="stdout={{output}}"

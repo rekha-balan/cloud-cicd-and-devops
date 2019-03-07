@@ -1,0 +1,15 @@
+---
+- hosts: server
+  user: ubuntu
+  connection: ssh
+  tasks:
+  - name: copy shell file  
+    copy: src=fail.sh dest=/home/ubuntu/fail.sh mode=0755
+  - name: fail but continue 
+    command: /home/ubuntu/fail.sh 
+    register: output 
+    ignore_errors: yes
+  - debug: 
+      msg="stdout {{output.stdout}}"
+  - debug: 
+      msg="stderr {{output.stderr}}"

@@ -1,3 +1,18 @@
+Roles is a structured way to "include" file. You must structure your directory like this: 
+
+<pre>
+role_name
+-- defaults
+-- files 
+-- handlers 
+-- meta
+-- tasks 
+-- templates
+-- vars
+
+Roles will look for main.yml
+</pre>
+
 <pre>
 sudo apt-get update
 sudo apt-get upgrade -y

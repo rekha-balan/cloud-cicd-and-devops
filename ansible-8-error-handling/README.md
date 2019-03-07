@@ -1,3 +1,13 @@
+Demonstrate 
+1. Playbook 
+2. Static host
+
+--- 
+
+
+1. setup an Ansible control server and any number of servers used to run commands again
+2. Run the run_playbook.sh
+
 <pre>
 sudo apt-get update
 sudo apt-get upgrade -y
