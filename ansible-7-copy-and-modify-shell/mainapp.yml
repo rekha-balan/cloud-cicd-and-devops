@@ -1,0 +1,11 @@
+---
+
+- hosts: server
+  user: ubuntu
+  sudo: yes
+  - name: upload a file to the target server if doesnt exist
+    copy:
+      src: program.sh
+      dest: /home/ubuntu/program.sh
+      mode: 0755
+  

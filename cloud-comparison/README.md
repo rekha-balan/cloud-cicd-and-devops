@@ -163,7 +163,7 @@
             Serverless
          </td>
          <td>
-            <a href="https://aws.amazon.com/lambda/">Lamda</a>
+            <a href="https://aws.amazon.com/lambda/">Lambda</a>
          </td>
          <td>
             <a href="https://azure.microsoft.com/services/functions/">Functions</a>

@@ -1,6 +1,6 @@
 This repositories is for various examples of my DevOps and CI/CD automation codes
 
-Linux academy video up to 2:40
+Linux academy video up to 2:51
 
 
 # Ansible Concepts
