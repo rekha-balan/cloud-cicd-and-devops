@@ -47,3 +47,6 @@ Roles - playbook that's split into multiple files, use for packaging into re-usa
 Ansible Galaxy is a repository for roles 
 
 Vault - secure store for sensitive data e.g. passwowrds or encrypted files. Command line ansible-vault and use --ask-vault-pass 
+
+Parallelism - run with flag "-f <number>" .. do multiple servers in parallel to reduce execution time 
+or check playbook "serial:"
