@@ -10,7 +10,8 @@ role_name
 -- templates
 -- vars
 
-Roles will look for main.yml
+Roles will look for main.yml.
+You will only need the folder that you need, not all folders 
 </pre>
 
 <pre>

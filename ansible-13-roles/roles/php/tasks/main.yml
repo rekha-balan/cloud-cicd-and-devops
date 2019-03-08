@@ -1,0 +1,5 @@
+- name: install php
+  action: apt name={{item}} state=latest
+  with_items:
+  - php
+  - php-mysql

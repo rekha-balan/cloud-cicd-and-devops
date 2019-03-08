@@ -1,2 +1,5 @@
-Linux academy video up to 3:07
+DONE 
+- ansible related samples 
 
+TODO
+- 

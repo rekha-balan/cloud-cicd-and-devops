@@ -5,6 +5,8 @@
     - shell: echo 'pretask'
   roles:
     - { role: apache-webserver, when: "ansible_os_family == 'Debian'" }
+    - apache-index
+    - php
   tasks: 
     - shell: echo 'task'
   post_tasks: 
